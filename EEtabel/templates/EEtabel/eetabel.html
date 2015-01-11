@@ -1,0 +1,8 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div>
+{% load django_tables2 %}
+{% render_table table %}
+</div>
+
+{% endblock %}

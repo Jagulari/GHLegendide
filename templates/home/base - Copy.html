@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}Pealeht{% endblock %}</title>
+</head>
+
+<body bgcolor="#336633">
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <p>&nbsp;</p>
+<h1 style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; font-size: 36px; text-align: center; color: #CC0;"><u>Legendide Liiga</u></h1>
+<br />
+<a href="/admin">admin </a>
+<br />
+<a href="/polls">polls </a>
+<br />
+<a href="/EEtabel">EEtabel </a>
+<br />
+<a href="/..">index </a>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

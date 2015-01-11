@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+
+		<body>
+			<h1>Tabel siia</h1>
+<h1>{{ question.question_text }}</h1>
+
+
+			<div>{% for Summoners in output %}
+			<tr>{{ Summoners.Summoner_name }}</tr>
+			<tr>{{ Summoners.League }}</tr>
+			<tr>{{ Summoners.Division }}</tr>
+			<li>{{ Summoners.League_points }}</li>
+			{% endfor %}
+			</div>
+
+
+<div>
+{% load django_tables2 %}
+{% render_table table %}
+</div>
+
+<br />
+let's <a href="/admin">admin </a>
+<br />
+let's <a href="/polls">polls </a>
+<br />
+let's <a href="/..">index </a>
+<br />
+		</body>
+
+	</html>

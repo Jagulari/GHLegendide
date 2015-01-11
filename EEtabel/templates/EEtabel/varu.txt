@@ -1,0 +1,30 @@
+			<div>{% for Summoners in Summoners.all %}
+			<li>{{ Summoners.Summoner_name }}</li>
+			{% endfor %}
+			</div>
+
+<table>
+<tr>
+    {% for column in table.columns %}
+    <th><a href="?sort={{ column.name_toggled }}">{{ column }}</a></th>
+    {% endfor %}
+</tr>
+{% for row in table.rows %}
+    <tr>
+    {% for value in row %}
+        <td>{{ value }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+
+{% block content %}
+{% for Summoners in Summoners %}
+<div class="Summoners">
+  </div>
+  <h1><a>{{ Summoners.Summoner_name }}</a></h1>
+  <p>{{ Summoners.League }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

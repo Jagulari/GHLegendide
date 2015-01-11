@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>{% block title %}Legendide Liiga{% endblock %}</title>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<div id="wrapper">
+    {% block header %}
+    <div id="header" style="text-align: center; font-size: 36px;">Legendide Liiga</div>
+</div>
+<hr>
+{% endblock %}
+    <div id="sidebar">
+        {% block sidebar %}
+        <section>
+            {% load staticfiles %}
+            <a href="/.."><img src="{% static "img/pealeht.gif" %}" width="200" height="45"  alt=""/></a>
+            <a href="/EEtabel"><img src="{% static "img/tabel.gif" %}" width="200" height="45"  alt=""/></a>
+            <a href="/polls"><img src="{% static "img/registreeri.gif" %}" width="200" height="45"  alt=""/></a>
+            <a href="/admin"><img src="{% static "img/admin.gif" %}" width="200" height="45"  alt=""/></a>
+        </section>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
